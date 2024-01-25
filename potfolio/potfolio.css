@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container{
+    min-height: 100vh;
+width: 100%;
+display: flex;
+}
+.nav{
+    display: flex;
+    gap: 3.5rem;
+   position: fixed;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.nav li{
+    list-style: none;
+    color: aliceblue;
+
+}
+.nav li a{
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform:capitalize;
+    color: #fff;
+    position: relative;
+
+   
+ 
+  
+}
+.nav li a::after, .nav .after::after{
+    content: "";
+    position: absolute;
+    background: #f2f3f2;
+    width: 100%;
+    height: 0.1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+   
+    transition: transform 0.5s ;
+}
+.nav li a:hover::after, .nav .after::after{
+    transform: scaleX(1);
+ 
+  
+
+}
+.left-con , .right-con{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.left-con{
+background: rgb(118, 112, 112);
+background: linear-gradient(76deg, rgba(2,0,36,0.9249824929971989) 11%, rgba(63,0,255,1) 40%, rgba(0,0,0,1) 79%);;
+width: 70%;
+padding-left: 3rem ;
+
+}
+.icon .fa-brands {
+    color: white;
+font-size: 1.7rem;
+}
+.icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    
+}
+.content{
+    margin-left: 4rem;
+}
+.first{
+    color:white;
+    right: 3px;
+    font-size: 1.3rem;
+}
+
+.content .first span{
+    color: aqua;
+    font-size: x-large;
+} 
+.content >.detail{
+    font-size: .7rem;
+    color: white;
+    max-width: 30rem;
+    margin: .4rem 0 1rem 0;
+    line-height:1.3rem; 
+}
+
+.content h1{
+    margin-top: 10px;
+    font-size:1.7rem;
+    color: aqua;
+    
+}
+.btn button{
+    border:2px solid lightblue;
+    padding: .9rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+   }
+   button:nth-child(1){
+    background:aqua;
+    color: black;
+   }
+   button:nth-child(2){
+    background: transparent;
+    color: aqua;
+    margin-left: 2rem;
+   }
+   button:nth-child(1):hover{
+background: transparent;
+color: aqua;
+   }
+   button:nth-child(2):hover{
+background: aqua;
+color: black;
+   }
+   .icon .fa-brands:hover{
+    cursor: pointer;
+    background: linear-gradient(#fff, #3877ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   }    
+
+.right-con{
+background: linear-gradient(-45deg, #3877ff , black 70% );
+
+width: 30%;
+}
+.img .circle{
+aspect-ratio: 1;
+position: absolute;
+border-radius: 50%;
+top: 50%; 
+left: 70%; 
+transform: translate(-50%, -50%);
+
+}
+.circle:nth-child(1){
+background: linear-gradient(90deg,transparent 50% ,black 50%);
+width: 25rem;
+
+
+}
+.circle:nth-child(2){
+background-image: url("WhatsApp Image 2024-01-24 at 16.07.18_f5f1cc34.jpg");
+width: 19rem;
+
+background-size:cover;
+background-position:right 0px;
+background-repeat: no-repeat;
+border: .4rem solid white;
+box-shadow: 0 0 1rem #fff, inset 0 0 1rem #fff, 0 0 2rem #3877ff, inset 0 0 2rem #3877ff, 0 0 4rem #3877ff,inset 0 0 4rem #3877ff; 
+}    
+h1{
+    overflow: hidden;
+  border-right: .15em solid orange; 
+  border: transparent;
+  white-space:nowrap; 
+  margin: 0;
+  letter-spacing: .1px; 
+  animation:
+   typing 3s steps(40,end), 
+           blink-caret step-start infinite;
+}
+@keyframes typing {
+    from { width: 0% }
+    to { width: 100% }
+ }
+  @keyframes blink-caret { 
+    from, to { border-color: transparent }
+    50% { border-color: rgb(243, 240, 234); }
+  } 
